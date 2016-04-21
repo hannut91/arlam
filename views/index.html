@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>Mainpage</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/styles.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <div ng-controller="myController">
+      <iframe src="https://calendar.google.com/calendar/embed?title=%EC%97%B0%EA%B5%AC%EC%8B%A4%20%EC%9D%BC%EC%A0%95%ED%91%9C&amp;
+      showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;
+      showTz=0&amp;height=500&amp;wkst=2&amp;bgcolor=%23ffffff&amp;src=cwnucsl%40gmail.com&amp;
+      color=%231B887A&amp;src=ko.south_korea%23holiday%40group.v.calendar.google.com&amp;
+      color=%23125A12&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2328754E&amp;
+      ctz=Asia%2FSeoul" style="border-width:0" width="1024" height="500" frameborder="0" scrolling="no"></iframe>
+<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=37.6&lon=127&name=Seoul&units=uk"> </iframe>
+  </div>
+  <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+  <script src="/static/js/my_app.js"></script>
+</body>
+</html>
