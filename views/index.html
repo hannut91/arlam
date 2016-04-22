@@ -13,7 +13,25 @@
       color=%231B887A&amp;src=ko.south_korea%23holiday%40group.v.calendar.google.com&amp;
       color=%23125A12&amp;src=%23contacts%40group.v.calendar.google.com&amp;color=%2328754E&amp;
       ctz=Asia%2FSeoul" style="border-width:0" width="1024" height="500" frameborder="0" scrolling="no"></iframe>
-<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=37.6&lon=127&name=Seoul&units=uk"> </iframe>
+      <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="1024" src="http://forecast.io/embed/#lat=35.2409953&lon=128.695380&name=Changwon&units=uk"> </iframe>
+      <table class="table">
+        <thead>
+            <tr>
+                <th>버스번호</th>
+                <th>도착정보</th>
+            </tr>            
+        </thead>
+        <tbody>
+            <tr ng-repeat="result in result.msg.ServiceResult.MsgBody[0].ArriveInfoList[0].row">
+                <td ng-if="result.ROUTE_ID[0][5]!='0'">{{result.ROUTE_ID[0].slice(5,8)}}</td>
+                <td ng-if="result.ROUTE_ID[0][5]=='0'">{{result.ROUTE_ID[0].slice(6,8)}}</td>
+                <td ng-if="result.PREDICT_TRAV_TM[0]">{{result.PREDICT_TRAV_TM[0]}}분 후 도착 예정입니다. {{result.LEFT_STATION[0]}}번째 전 출발</td>
+                <td ng-if="result.PREDICT_TRAV_TM[0]==0">잠시 후 도착예정입니다.</td>
+            </tr>
+        </tbody>
+
+        
+      </table>
   </div>
   <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
   <script src="/static/js/my_app.js"></script>
